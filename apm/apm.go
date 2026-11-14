@@ -27,6 +27,7 @@ type Provider struct {
 	logger *slog.Logger
 }
 
+// init
 func Init(ctx context.Context, cfg Config, log *slog.Logger) (*Provider, error) {
 	exporter, err := otlptracegrpc.New(
 		ctx,
